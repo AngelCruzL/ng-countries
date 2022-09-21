@@ -3,7 +3,7 @@
     type="text"
     name="searchTerm"
     class="form-control"
-    placeholder="Buscar País"
+    [placeholder]="placeholder"
     aria-label="Input para buscar por país"
     [(ngModel)]="searchTerm"
     (input)="keyPressed()"
