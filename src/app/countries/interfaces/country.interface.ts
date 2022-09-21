@@ -1,109 +1,67 @@
 export interface Country {
+  alpha2Code: string;
+  alpha3Code: string;
   altSpellings: string[];
   area: number;
   borders: string[];
-  capital: string[];
-  capitalInfo: CapitalInfo;
-  car: Car;
-  cca2: string;
-  cca3: string;
-  ccn3: string;
+  callingCodes: string[];
+  capital: string;
   cioc: string;
-  alpha2Code: string;
-  coatOfArms: CoatOfArms;
-  continents: string[];
-  currencies: Currencies;
-  demonyms: Demonyms;
-  fifa: string;
+  currencies: Currency[];
+  demonym: string;
   flag: string;
-  flags: CoatOfArms;
-  gini: Gini;
-  idd: Idd;
+  flags: Flags;
+  gini: number;
   independent: boolean;
-  landlocked: boolean;
-  languages: Languages;
+  languages: Language[];
   latlng: number[];
-  maps: Maps;
-  name: Name;
+  name: string;
+  nativeName: string;
+  numericCode: string;
   population: number;
-  postalCode: PostalCode;
   region: string;
-  startOfWeek: string;
-  status: string;
+  regionalBlocs: RegionalBloc[];
   subregion: string;
   timezones: string[];
-  tld: string[];
-  translations: { [key: string]: Translation };
-  unMember: boolean;
+  topLevelDomain: string[];
+  translations: Translations;
 }
 
-export interface CapitalInfo {
-  latlng: number[];
-}
-
-export interface Car {
-  side: string;
-  signs: string[];
-}
-
-export interface CoatOfArms {
-  png: string;
-  svg: string;
-}
-
-export interface Currencies {
-  MXN: Mxn;
-}
-
-export interface Mxn {
+export interface Currency {
+  code: string;
   name: string;
   symbol: string;
 }
 
-export interface Demonyms {
-  eng: Eng;
-  fra: Eng;
+export interface Flags {
+  png: string;
+  svg: string;
 }
 
-export interface Eng {
-  f: string;
-  m: string;
+export interface Language {
+  iso639_1: string;
+  iso639_2: string;
+  name: string;
+  nativeName: string;
 }
 
-export interface Gini {
-  '2018': number;
+export interface RegionalBloc {
+  acronym: string;
+  name: string;
+  otherAcronyms: string[];
+  otherNames: string[];
 }
 
-export interface Idd {
-  root: string;
-  suffixes: string[];
-}
-
-export interface Languages {
-  spa: string;
-}
-
-export interface Maps {
-  googleMaps: string;
-  openStreetMaps: string;
-}
-
-export interface Name {
-  common: string;
-  nativeName: NativeName;
-  official: string;
-}
-
-export interface NativeName {
-  spa: Translation;
-}
-
-export interface Translation {
-  common: string;
-  official: string;
-}
-
-export interface PostalCode {
-  format: string;
-  regex: string;
+export interface Translations {
+  br: string;
+  de: string;
+  es: string;
+  fa: string;
+  fr: string;
+  hr: string;
+  hu: string;
+  it: string;
+  ja: string;
+  nl: string;
+  pt: string;
 }
