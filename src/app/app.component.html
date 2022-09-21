@@ -1,5 +1,16 @@
-<app-by-capital></app-by-capital>
-<app-by-country></app-by-country>
-<app-by-region></app-by-region>
-<app-country-details></app-country-details>
-<app-sidebar></app-sidebar>
+<div class="row container mt-4">
+  <div class="col-3">
+    <h2>Búsquedas</h2>
+    <hr />
+
+    <ul class="list-group">
+      <li class="list-group-item">Buscar país</li>
+      <li class="list-group-item">Por region</li>
+      <li class="list-group-item">Por capital</li>
+    </ul>
+  </div>
+
+  <div class="col">
+    <router-outlet></router-outlet>
+  </div>
+</div>
