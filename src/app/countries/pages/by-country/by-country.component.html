@@ -1,1 +1,45 @@
-<p>by-country works!</p>
+<h2>Por País</h2>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <form autocomplete="off" (ngSubmit)="search()">
+      <input
+        type="text"
+        name="searchTerm"
+        class="form-control"
+        placeholder="Buscar País"
+        aria-label="Input para buscar por país"
+        [(ngModel)]="searchTerm"
+      />
+    </form>
+  </div>
+</div>
+
+<hr />
+
+<div class="alert alert-danger">No se encontró nada con el termino TESRM</div>
+
+<div class="row">
+  <div class="col">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Bandera</th>
+          <th>Nombre</th>
+          <th>Población</th>
+          <th></th>
+        </tr>
+
+        <tr>
+          <td>1</td>
+          <td>Bandera</td>
+          <td>nombre</td>
+          <td>435326</td>
+          <td><a href="">Ver mas</a></td>
+        </tr>
+      </thead>
+    </table>
+  </div>
+</div>
