@@ -9,6 +9,7 @@ export interface Country {
   cca3: string;
   ccn3: string;
   cioc: string;
+  alpha2Code: string;
   coatOfArms: CoatOfArms;
   continents: string[];
   currencies: Currencies;
