@@ -6,5 +6,6 @@
     placeholder="Buscar País"
     aria-label="Input para buscar por país"
     [(ngModel)]="searchTerm"
+    (input)="keyPressed()"
   />
 </form>
