@@ -4,9 +4,32 @@
     <hr />
 
     <ul class="list-group">
-      <li class="list-group-item">Buscar país</li>
-      <li class="list-group-item">Por region</li>
-      <li class="list-group-item">Por capital</li>
+      <li
+        routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="list-group-item"
+      >
+        Buscar país
+      </li>
+
+      <li
+        routerLink="region"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="list-group-item"
+      >
+        Por region
+      </li>
+
+      <li
+        routerLink="capital"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="list-group-item"
+      >
+        Por capital
+      </li>
     </ul>
   </div>
 
