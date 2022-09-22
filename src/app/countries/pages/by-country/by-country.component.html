@@ -11,6 +11,24 @@
   </div>
 </div>
 
+<ul class="list-group" *ngIf="showSuggestions">
+  <li
+    class="list-group-item list-group-item-action"
+    *ngFor="let country of suggestedCountries"
+  >
+    <a class="nav-link" [routerLink]="['/pais', country.alpha2Code]">{{
+      country.name
+    }}</a>
+  </li>
+
+  <li
+    class="list-group-item list-group-item-action"
+    (click)="search(searchTerm)"
+  >
+    <a class="nav-link">Buscar "{{ searchTerm }}"</a>
+  </li>
+</ul>
+
 <hr />
 
 <div *ngIf="hasError" class="alert alert-danger">
