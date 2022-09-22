@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+import { Country } from '../../interfaces/country.interface';
+import { CountryService } from '../../services/country.service';
+
 @Component({
   selector: 'app-by-region',
   templateUrl: './by-region.component.html',
@@ -28,8 +31,9 @@ export class ByRegionComponent {
     'SAARC',
   ];
   activeRegion: string = '';
+  countries: Country[] = [];
 
-  constructor() {}
+  constructor(private countryService: CountryService) {}
 
   getCssClass(region: string): string {
     return region === this.activeRegion
@@ -38,8 +42,15 @@ export class ByRegionComponent {
   }
 
   activateRegion(region: string) {
-    this.activeRegion = region;
+    if (region === this.activeRegion) return;
 
-    // TODO: Service call
+    this.activeRegion = region;
+    this.countries = [];
+
+    this.countryService
+      .searchCountriesByRegion(region)
+      .subscribe((countries) => {
+        this.countries = countries;
+      });
   }
 }
