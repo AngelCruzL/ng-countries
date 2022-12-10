@@ -1,27 +1,48 @@
 # CountriesApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
+This project is a simple SPA app to display countries information and search it by name, capital or region.
 
-## Development server
+## General info
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Builded with Angular 14.2.3 and bootstrap 5.2.1 this project was created to improve my skills in Angular and Typescript. Also to learn how Angular works as a framework and how to use it to build a SPA app, this include the use of components, services, routing, etc.
 
-## Code scaffolding
+## Technologies
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Project is created with:
 
-## Build
+- HTML 5
+- [Bootstrap 5.2.1](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Angular 14.2.3](https://angular.io/)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Setup
 
-## Running unit tests
+### Prerequisites
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To run this project, you need to have installed [Node.js](https://nodejs.org/en/) and [Angular CLI](https://angular.io/cli) in your computer.
 
-## Running end-to-end tests
+### Installing
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+To install this project, follow these steps:
 
-## Further help
+1. Clone the repository
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+   ```sh
+   git clone git@github.com:AngelCruzL/ng-countries.git
+   ```
+
+2. Install dependencies
+
+   ```sh
+   npm install
+   ```
+
+3. Run the project
+
+   ```sh
+   ng serve -o
+   ```
+
+Automatically the browser will open the app in the port 4200and you will see the app running.
+
+![demo](./demo.png)
